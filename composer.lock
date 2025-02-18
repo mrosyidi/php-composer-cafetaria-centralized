@@ -4,8 +4,42 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ceec2edb38bca7b60aeff21409fb4cb9",
-    "packages": [],
+    "content-hash": "99f548feb2199a73a520cd93f12c9866",
+    "packages": [
+        {
+            "name": "cafetariahelper/php-composer-cafetaria-helper",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrosyidi/php-composer-cafetaria-helper.git",
+                "reference": "aff96738a546ad7a5d57bcf5182b083e4c91bebd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrosyidi/php-composer-cafetaria-helper/zipball/aff96738a546ad7a5d57bcf5182b083e4c91bebd",
+                "reference": "aff96738a546ad7a5d57bcf5182b083e4c91bebd",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cafetaria\\Helper\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "mrosyidi",
+                    "email": "rosyidiyuekunchen@gmail.com"
+                }
+            ],
+            "description": "Library Cafetaria Apps",
+            "support": {
+                "source": "https://github.com/mrosyidi/php-composer-cafetaria-helper/tree/1.0.0",
+                "issues": "https://github.com/mrosyidi/php-composer-cafetaria-helper/issues"
+            },
+            "time": "2025-02-18T14:46:54+00:00"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",

@@ -13,5 +13,13 @@
             "Cafetaria\\": "/app"
         }
     },
-    "require": {}
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mrosyidi/php-composer-cafetaria-helper"
+        }
+    ],
+    "require": {
+        "cafetariahelper/php-composer-cafetaria-helper": "1.0.0"
+    }
 }

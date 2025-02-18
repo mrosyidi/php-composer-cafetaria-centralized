@@ -4,24 +4,19 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitceec2edb38bca7b60aeff21409fb4cb9
+class ComposerStaticInite916e604744c25ad3204eb496cadd283
 {
     public static $prefixLengthsPsr4 = array (
         'C' => 
         array (
             'Cafetaria\\Helper\\' => 17,
-            'Cafetaria\\' => 10,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Cafetaria\\Helper\\' => 
         array (
-            0 => __DIR__ . '/..' . '/cafetariahelper/php-composer-cafetaria-helper/src',
-        ),
-        'Cafetaria\\' => 
-        array (
-            0 => '/app',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
@@ -32,9 +27,9 @@ class ComposerStaticInitceec2edb38bca7b60aeff21409fb4cb9
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitceec2edb38bca7b60aeff21409fb4cb9::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitceec2edb38bca7b60aeff21409fb4cb9::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitceec2edb38bca7b60aeff21409fb4cb9::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInite916e604744c25ad3204eb496cadd283::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite916e604744c25ad3204eb496cadd283::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInite916e604744c25ad3204eb496cadd283::$classMap;
 
         }, null, ClassLoader::class);
     }

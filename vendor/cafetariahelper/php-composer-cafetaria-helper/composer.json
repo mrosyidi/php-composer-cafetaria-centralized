@@ -1,0 +1,17 @@
+{
+    "name": "cafetariahelper/php-composer-cafetaria-helper",
+    "description": "Library Cafetaria Apps",
+    "type": "library",
+    "authors": [
+        {
+            "name": "mrosyidi",
+            "email": "rosyidiyuekunchen@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Cafetaria\\Helper\\": "src/"
+        }
+    },
+    "require": {}
+}
