@@ -21,7 +21,7 @@ class ComposerStaticInitceec2edb38bca7b60aeff21409fb4cb9
         ),
         'Cafetaria\\' => 
         array (
-            0 => '/app',
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 

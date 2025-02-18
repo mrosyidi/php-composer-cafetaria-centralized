@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Cafetaria\\Helper\\' => array($vendorDir . '/cafetariahelper/php-composer-cafetaria-helper/src'),
-    'Cafetaria\\' => array('/app'),
+    'Cafetaria\\' => array($baseDir . '/app'),
 );
