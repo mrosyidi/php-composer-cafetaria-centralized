@@ -2,7 +2,10 @@
 
     require_once __DIR__ . "/../vendor/autoload.php";
 
+    use \Cafetaria\Config\Database;
     use \Cafetaria\Helper\InputHelper;
+
+    $connection = Database::getConnection();
 
     echo "Cafetaria App" . PHP_EOL;
 
