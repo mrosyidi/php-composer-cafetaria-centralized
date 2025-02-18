@@ -8,5 +8,10 @@
             "email": "rosyidiyuekunchen@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Cafetaria\\": "/app"
+        }
+    },
     "require": {}
 }
