@@ -11,4 +11,13 @@
         echo "Harga : " . $food->getPrice() . PHP_EOL;
     }
 
-    testInstanceFoodConstruct();
+    function testInstanceFoodEncapsulate(): void
+    {
+        $food = new Food();
+        $food->setName("Soto Ayam");
+        $food->setPrice(12000);
+        echo "Nama : " . $food->getName() . PHP_EOL;
+        echo "Harga : " . $food->getPrice() . PHP_EOL;
+    }
+
+    testInstanceFoodEncapsulate();
