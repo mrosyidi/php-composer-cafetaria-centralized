@@ -34,7 +34,9 @@
 
         public function save(Food $food): void
         {
-
+            $sql = "INSERT INTO foods(name,price) VALUES(?,?)";
+            $statement = $this->connection->prepare($sql);
+            $statement->execute([$food->getName(),$food->getPrice()]);
         }
 
         public function remove(string $name): bool
