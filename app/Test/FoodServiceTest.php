@@ -24,5 +24,13 @@
         $foodService->showFood();
     }
 
+    function testGetFood(): void 
+    {
+        $connection = Database::getConnection();
+        $foodRepository = new FoodRepositoryImpl($connection);
+        $foodService = new FoodServiceImpl($foodRepository);
+        $foods = $foodService->getFood();
+        var_dump($foods);
+    }
 
-    testAddFood();
+    testGetFood();
