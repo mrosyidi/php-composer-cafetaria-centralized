@@ -16,4 +16,15 @@
         $foodView->showFood();
     }
 
-    testViewShowFood();
+    function testViewAddFood(): void 
+    {
+        $connection = Database::getConnection();
+        $foodRepository = new FoodRepositoryImpl($connection);
+        $foodService = new FoodServiceImpl($foodRepository);
+        $foodView = new FoodView($foodService);
+        $foodService->showFood();
+        $foodView->addFood();
+        $foodService->showFood();
+    }
+
+    testViewAddFood();
