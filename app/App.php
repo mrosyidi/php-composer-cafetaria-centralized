@@ -4,11 +4,13 @@
 
     use \Cafetaria\Config\Database;
     use \Cafetaria\Repository\FoodRepositoryImpl;
+    use \Cafetaria\Service\FoodServiceImpl;
     use \Cafetaria\Helper\InputHelper;
 
     $connection = Database::getConnection();
 
     $foodRepository = new FoodRepositoryImpl($connection);
+    $foodService = new FoodServiceImpl($foodRepository);
 
     echo "Cafetaria App" . PHP_EOL;
 
