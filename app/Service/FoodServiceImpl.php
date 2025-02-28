@@ -42,7 +42,8 @@
 
         public function getFood(): array
         {
-
+            $foods = $this->foodRepository->findAll();
+            return $foods;
         }
 
         public function removeFood(string $name): bool
