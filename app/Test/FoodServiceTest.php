@@ -14,4 +14,15 @@
         $foodService->showFood();
     }
 
-    testShowFood();
+    function testAddFood(): void 
+    {
+        $connection = Database::getConnection();
+        $foodRepository = new FoodRepositoryImpl($connection);
+        $foodService = new FoodServiceImpl($foodRepository);
+        $foodService->showFood();
+        $foodService->addFood("Ayam Goreng", 9000);
+        $foodService->showFood();
+    }
+
+
+    testAddFood();
