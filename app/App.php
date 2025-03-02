@@ -6,6 +6,7 @@
     use \Cafetaria\Repository\FoodRepositoryImpl;
     use \Cafetaria\Repository\DrinkRepositoryImpl;
     use \Cafetaria\Service\FoodServiceImpl;
+    use \Cafetaria\Service\DrinkServiceImpl;
     use \Cafetaria\View\FoodView;
     use \Cafetaria\Helper\InputHelper;
 
@@ -15,6 +16,7 @@
     $drinkRepository = new DrinkRepositoryImpl($connection);
 
     $foodService = new FoodServiceImpl($foodRepository);
+    $drinkService = new DrinkServiceImpl($drinkRepository);
     
     $foodView = new FoodView($foodService);
 
