@@ -77,4 +77,34 @@
                 }
             }
         }
+
+        function removeFood(): void 
+        {
+            echo "MENGHAPUS MAKANAN" . PHP_EOL;
+
+            $number = InputHelper::input("Nomor makanan (x untuk batal)");
+
+            if($number == "x")
+            {
+                echo "Batal menghapus makanan" . PHP_EOL;
+            }else if(!is_numeric($number))
+            {
+                echo "Gagal menghapus makanan, nomor harus bilangan" . PHP_EOL;
+            }else if(count($this->foodService->getFood()) < $number || $number <= 0)
+            {
+                echo "Gagal menghapus makanan nomor $number" . PHP_EOL;
+            }else 
+            {
+                $name = $this->foodService->getFood()[$number-1]->getName();
+                $success = $this->foodService->removeFood($name);
+
+                if($success)
+                {
+                    echo "Sukses menghapus makanan nomor $number" . PHP_EOL;
+                }else
+                {
+                    echo "Gagal menghapus makanan nomor $number" . PHP_EOL;
+                }
+            }
+        }
     }
