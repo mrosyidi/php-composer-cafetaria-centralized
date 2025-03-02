@@ -48,6 +48,7 @@
 
         public function removeFood(string $name): bool
         {
-
+            $result = $this->foodRepository->remove($name) ? true : false;
+            return $result;
         }
     }
