@@ -11,4 +11,13 @@
         echo "Harga : " . $drink->getPrice() . PHP_EOL;
     }
 
-    testInstanceDrinkConstruct();
+    function testInstanceDrinkEncapsulate(): void
+    {
+        $drink = new Drink();
+        $drink->setName("Es Coklat");
+        $drink->setPrice(12000);
+        echo "Nama : " . $drink->getName() . PHP_EOL;
+        echo "Price : " . $drink->getPrice() . PHP_EOL;
+    }
+
+    testInstanceDrinkEncapsulate();
