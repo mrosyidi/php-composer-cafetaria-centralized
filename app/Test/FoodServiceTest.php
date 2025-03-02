@@ -33,4 +33,14 @@
         var_dump($foods);
     }
 
-    testGetFood();
+    function testRemoveFood(): void 
+    {
+        $connection = Database::getConnection();
+        $foodRepository = new FoodRepositoryImpl($connection);
+        $foodService = new FoodServiceImpl($foodRepository);
+        $foodService->showFood();
+        $foodService->removeFood("Pastel");
+        $foodService->showFood();
+    }
+
+    testRemoveFood();
