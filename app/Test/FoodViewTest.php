@@ -38,4 +38,4 @@
         $foodService->showFood();
     }
 
-    testViewRemoveFood();
+    testViewShowFood();
