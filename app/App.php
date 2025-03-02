@@ -4,6 +4,7 @@
 
     use \Cafetaria\Config\Database;
     use \Cafetaria\Repository\FoodRepositoryImpl;
+    use \Cafetaria\Repository\DrinkRepositoryImpl;
     use \Cafetaria\Service\FoodServiceImpl;
     use \Cafetaria\View\FoodView;
     use \Cafetaria\Helper\InputHelper;
@@ -11,7 +12,10 @@
     $connection = Database::getConnection();
 
     $foodRepository = new FoodRepositoryImpl($connection);
+    $drinkRepository = new DrinkRepositoryImpl($connection);
+
     $foodService = new FoodServiceImpl($foodRepository);
+    
     $foodView = new FoodView($foodService);
 
     echo "Cafetaria App" . PHP_EOL;
