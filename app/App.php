@@ -30,7 +30,7 @@
 
         if($pilihan == "1")
         {
-            
+            $foodView->showFood();
         }else if($pilihan == "2")
         {
 
