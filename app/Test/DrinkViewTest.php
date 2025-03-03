@@ -1,0 +1,19 @@
+<?php 
+
+    require_once __DIR__ . "/../../vendor/autoload.php";
+
+    use \Cafetaria\Config\Database;
+    use \Cafetaria\Repository\DrinkRepositoryImpl;
+    use \Cafetaria\Service\DrinkServiceImpl;
+    use \Cafetaria\View\DrinkView;
+
+    function testViewShowDrink(): void 
+    {
+        $connection = Database::getConnection();
+        $drinkRepository = new DrinkRepositoryImpl($connection);
+        $drinkService = new DrinkServiceImpl($drinkRepository);
+        $drinkView = new DrinkView($drinkService);
+        $drinkView->showDrink();
+    }
+
+    testViewShowDrink();
