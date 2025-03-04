@@ -16,4 +16,15 @@
         $drinkView->showDrink();
     }
 
-    testViewShowDrink();
+    function testViewAddDrink(): void 
+    {
+        $connection = Database::getConnection();
+        $drinkRepository = new DrinkRepositoryImpl($connection);
+        $drinkService = new DrinkServiceImpl($drinkRepository);
+        $drinkView = new DrinkView($drinkService);
+        $drinkService->showDrink();
+        $drinkView->addDrink();
+        $drinkService->showDrink();
+    }
+
+    testViewAddDrink();
