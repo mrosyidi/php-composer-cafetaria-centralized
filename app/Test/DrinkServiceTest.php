@@ -25,4 +25,13 @@
         $drinkService->showDrink();
     }
 
-    testAddDrink();
+    function testGetDrink(): void 
+    {
+        $connection = Database::getConnection();
+        $drinkRepository = new DrinkRepositoryImpl($connection);
+        $drinkService = new DrinkServiceImpl($drinkRepository);
+        $drinks = $drinkService->getDrink();
+        var_dump($drinks);
+    }
+
+    testGetDrink();
