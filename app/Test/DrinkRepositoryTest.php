@@ -24,4 +24,14 @@
         var_dump($drinks);
     }
 
-    testSave();
+    function testRemove(): void 
+    {
+        $connection = Database::getConnection();
+        $drinkRepository = new DrinkRepositoryImpl($connection);
+        $result = $drinkRepository->remove("Es Campur");
+        var_dump($result);
+        $drinks = $drinkRepository->findAll();
+        var_dump($drinks);
+    }
+
+    testRemove();
