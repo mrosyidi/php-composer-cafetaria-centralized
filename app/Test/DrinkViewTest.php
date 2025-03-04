@@ -27,4 +27,4 @@
         $drinkService->showDrink();
     }
 
-    testViewAddDrink();
+    testViewShowDrink();
