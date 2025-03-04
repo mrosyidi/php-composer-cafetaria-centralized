@@ -15,4 +15,14 @@
         $drinkService->showDrink();
     }
 
-    testShowDrink();
+    function testAddDrink(): void 
+    {
+        $connection = Database::getConnection();
+        $drinkRepository = new DrinkRepositoryImpl($connection);
+        $drinkService = new DrinkServiceImpl($drinkRepository);
+        $drinkService->showDrink();
+        $drinkService->addDrink("Es Campur", 10000);
+        $drinkService->showDrink();
+    }
+
+    testAddDrink();
