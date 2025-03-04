@@ -48,6 +48,7 @@
 
         public function removeDrink(string $name): bool
         {
-
+            $result = $this->drinkRepository->remove($name) ? true : false;
+            return $result;
         }
     }
