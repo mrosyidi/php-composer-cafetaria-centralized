@@ -14,4 +14,14 @@
         var_dump($drinks);
     }
 
-    testFindAll();
+    function testSave(): void 
+    {
+        $connection = Database::getConnection();
+        $drink = new Drink("Jus Melon", 7000);
+        $drinkRepository = new DrinkRepositoryImpl($connection);
+        $drinkRepository->save($drink);
+        $drinks = $drinkRepository->findAll();
+        var_dump($drinks);
+    }
+
+    testSave();
