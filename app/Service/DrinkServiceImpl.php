@@ -42,7 +42,8 @@
 
         public function getDrink(): array
         {
-
+            $drinks = $this->drinkRepository->findAll();
+            return $drinks;
         }
 
         public function removeDrink(string $name): bool
