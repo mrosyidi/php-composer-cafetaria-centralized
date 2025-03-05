@@ -10,5 +10,16 @@
         var_dump($order);
     }
 
-    testInstanceOrderCostruct();
+    function testInstanceOrderEncapsulate(): void
+    {
+        $order = new Order();
+        $order->setCode(1);
+        $order->setName("Mie Goreng");
+        $order->setPrice(6000);
+        $order->setQty(2);
+        $order->setSubTotal();
+        var_dump($order);
+    }
+
+    testInstanceOrderEncapsulate();
 
