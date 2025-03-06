@@ -11,6 +11,7 @@
     use \Cafetaria\Service\OrderServiceImpl;
     use \Cafetaria\View\FoodView;
     use \Cafetaria\View\DrinkView;
+    use \Cafetaria\View\OrderView;
     use \Cafetaria\Helper\InputHelper;
 
     $connection = Database::getConnection();
@@ -21,9 +22,11 @@
 
     $foodService = new FoodServiceImpl($foodRepository);
     $drinkService = new DrinkServiceImpl($drinkRepository);
+    $orderService = new OrderServiceImpl($orderRepository);
     
     $foodView = new FoodView($foodService);
     $drinkView = new DrinkView($drinkService);
+    $orderView = new  OrderView($orderService);
 
     echo "Cafetaria App" . PHP_EOL;
 
