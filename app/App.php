@@ -5,6 +5,7 @@
     use \Cafetaria\Config\Database;
     use \Cafetaria\Repository\FoodRepositoryImpl;
     use \Cafetaria\Repository\DrinkRepositoryImpl;
+    use \Cafetaria\Repository\OrderRepositoryImpl;
     use \Cafetaria\Service\FoodServiceImpl;
     use \Cafetaria\Service\DrinkServiceImpl;
     use \Cafetaria\View\FoodView;
@@ -15,6 +16,7 @@
 
     $foodRepository = new FoodRepositoryImpl($connection);
     $drinkRepository = new DrinkRepositoryImpl($connection);
+    $orderRepository = new OrderRepositoryImpl($connection);
 
     $foodService = new FoodServiceImpl($foodRepository);
     $drinkService = new DrinkServiceImpl($drinkRepository);
