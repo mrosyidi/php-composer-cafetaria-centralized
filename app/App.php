@@ -8,6 +8,7 @@
     use \Cafetaria\Repository\OrderRepositoryImpl;
     use \Cafetaria\Service\FoodServiceImpl;
     use \Cafetaria\Service\DrinkServiceImpl;
+    use \Cafetaria\Service\OrderServiceImpl;
     use \Cafetaria\View\FoodView;
     use \Cafetaria\View\DrinkView;
     use \Cafetaria\Helper\InputHelper;
