@@ -15,4 +15,14 @@
         $orderService->showOrder();
     }
 
-    testShowOrder();
+    function testAddOrder(): void 
+    {
+        $connection = Database::getConnection();
+        $orderRepository = new OrderRepositoryImpl($connection);
+        $orderService = new OrderServiceImpl($orderRepository);
+        $orderService->showOrder();
+        $orderService->addOrder(1, "Soto Ayam", 12000, 1);
+        $orderService->showOrder();
+    }
+
+    testAddOrder();
