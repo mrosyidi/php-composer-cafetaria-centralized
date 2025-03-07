@@ -48,6 +48,7 @@
 
         public function getOrder(): array
         {
-            
+            $orders = $this->orderRepository->findAll();
+            return $orders;
         }
     }
