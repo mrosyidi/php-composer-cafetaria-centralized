@@ -30,7 +30,7 @@
         $orderRepository = new OrderRepositoryImpl($connection);
         $orderService = new OrderServiceImpl($orderRepository);
         $orderView = new OrderView($foodService, $drinkService, $orderService);
-        $orderView->addOrder(1, true);
+        $orderView->addOrder(2, false);
         $orderService->showOrder();
     }
 
