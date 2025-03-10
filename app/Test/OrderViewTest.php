@@ -9,6 +9,8 @@
     use \Cafetaria\Service\DrinkServiceImpl;
     use \Cafetaria\Repository\OrderRepositoryImpl;
     use \Cafetaria\Service\OrderServiceImpl;
+    use \Cafetaria\Repository\PaymentRepositoryImpl;
+    use \Cafetaria\Service\PaymentServiceImpl;
     use \Cafetaria\View\OrderView;
 
     function testViewShowOrder(): void 
@@ -20,7 +22,9 @@
         $drinkService = new DrinkServiceImpl($drinkRepository);
         $orderRepository = new OrderRepositoryImpl($connection);
         $orderService = new OrderServiceImpl($orderRepository);
-        $orderView = new OrderView($foodService, $drinkService, $orderService);
+        $paymentRepository = new PaymentRepositoryImpl($connection);
+        $paymentService = new PaymentServiceImpl($paymentRepository);
+        $orderView = new OrderView($foodService, $drinkService, $orderService, $paymentService);
         $orderView->showOrder();
     }
 
