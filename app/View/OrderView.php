@@ -5,6 +5,7 @@
     use \Cafetaria\Service\FoodService;
     use \Cafetaria\Service\DrinkService;
     use \Cafetaria\Service\OrderService;
+    use \Cafetaria\Service\PaymentService;
     use \Cafetaria\Helper\CodeHelper;
     use \Cafetaria\Helper\DataHelper;
     use \Cafetaria\Helper\InputHelper;
@@ -15,12 +16,14 @@
         private FoodService $foodService;
         private DrinkService $drinkService;
         private OrderService $orderService;
+        private PaymentService $paymentService;
 
-        public function __construct(FoodService $foodService, DrinkService $drinkService, OrderService $orderService)
+        public function __construct(FoodService $foodService, DrinkService $drinkService, OrderService $orderService, PaymentService $paymentService)
         {
             $this->foodService = $foodService;
             $this->drinkService = $drinkService;
             $this->orderService = $orderService;
+            $this->paymentService = $paymentService;
         }
 
         public function showOrder(): void 
@@ -61,6 +64,7 @@
         public function addOrder(int $numberOrder, bool $exit): void 
         {
             $orders = $this->orderService->getOrder();
+            $payments = $this->paymentService->getPayment();
 
             if($numberOrder == 1)
             {
@@ -102,7 +106,7 @@
                     echo "Gagal menambah makanan, jumlah $order minimal satu" . PHP_EOL;
                 }else
                 {
-                    $code = CodeHelper::code($orders, [], $exit);
+                    $code = CodeHelper::code($orders, $payments, $exit);
                     $item = DataHelper::data($items, $number-1);
                     $this->orderService->addOrder($code, $item["name"], $item["price"], $qty);
                 }
