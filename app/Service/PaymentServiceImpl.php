@@ -43,6 +43,7 @@
 
         public function getPayment(): array
         {
-            
+            $payments = $this->paymentRepository->findAll();
+            return $payments;
         }
     }
