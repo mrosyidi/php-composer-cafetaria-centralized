@@ -2,6 +2,7 @@
 
     namespace Cafetaria\Service;
     
+    use \Cafetaria\Entity\Payment;
     use \Cafetaria\Repository\PaymentRepository;
 
     class PaymentServiceImpl implements PaymentService
@@ -36,7 +37,8 @@
 
         public function addPayment(int $code, int $total, int $pay): void
         {
-            
+            $payment = new Payment($code, $total, $pay);
+            $this->paymentRepository->save($payment);
         }
 
         public function getPayment(): array
