@@ -14,4 +14,13 @@
         $paymentService->showPayment();
     }
 
-    testShowPayment();
+    function testAddPayment(): void 
+    {
+        $connection = Database::getConnection();
+        $paymentRepository = new PaymentRepositoryImpl($connection);
+        $paymentService = new PaymentServiceImpl($paymentRepository);
+        $paymentService->addPayment(2, 60000, 100000);
+        $paymentService->showPayment();
+    }
+
+    testAddPayment();
