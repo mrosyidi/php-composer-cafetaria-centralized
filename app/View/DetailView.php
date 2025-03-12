@@ -4,6 +4,7 @@
 
     use \Cafetaria\Service\PaymentService;
     use \Cafetaria\Service\DetailService;
+    use \Cafetaria\Helper\FindHelper;
     use \Cafetaria\Helper\InputHelper;
 
     class DetailView
@@ -39,6 +40,26 @@
                 {
                     echo "Pilihan tidak dimengerti" . PHP_EOL;
                 }
+            }
+        }
+
+        public function filterDetail(): void
+        {
+            $code = InputHelper::input("Kode Pesanan (x untuk batal)");
+            $payments = $this->paymentService->getPayment();
+
+            if($code == "x")
+            {
+                echo "Batal melihat detail pesanan" . PHP_EOL;
+            }else if(empty($payments))
+            {
+                echo "Tidak ada daftar pembayaran" . PHP_EOL;
+            }else if(!FindHelper::find($payments, $code))
+            {
+                echo "Tidak ada kode pesanan yang sesuai dengan data pembayaran" . PHP_EOL;
+            }else
+            {
+                $this->detailService->showDetail($code);
             }
         }
     }
