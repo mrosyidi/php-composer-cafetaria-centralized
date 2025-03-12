@@ -5,6 +5,7 @@
     use \Cafetaria\Service\OrderService;
     use \Cafetaria\Service\PaymentService;
     use \Cafetaria\Helper\FindHelper;
+    use \Cafetaria\Helper\DuplicateHelper;
     use \Cafetaria\Helper\InputHelper;
     use \Cafetaria\Helper\PayHelper;
 
@@ -77,6 +78,7 @@
                     {
                         $change = $money-$pay;
                         $this->paymentService->addPayment($code, $pay, $money);
+                        $elements = DuplicateHelper::duplicate($orders, $code);
 
                         echo "Kembalian : Rp." . $change . PHP_EOL;
                     }
