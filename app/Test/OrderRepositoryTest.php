@@ -24,4 +24,13 @@
         var_dump($orders);
     }
 
-    testSave();
+    function testRemove(): void 
+    {
+        $connection = Database::getConnection();
+        $orderRepository = new OrderRepositoryImpl($connection);
+        $orderRepository->remove(1);
+        $orders = $orderRepository->findAll();
+        var_dump($orders);
+    }
+
+    testRemove();
