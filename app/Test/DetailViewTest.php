@@ -32,4 +32,4 @@
         $detailView->filterDetail();
     }
 
-    testViewFilterDetail();
+    testViewShowDetail();
