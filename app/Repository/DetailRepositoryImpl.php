@@ -36,6 +36,9 @@
 
         public function save(Detail $detail): void
         {
-            
+            $sql = "INSERT INTO details(code,name,price,qty,sub_total) VALUES(?,?,?,?,?)";
+            $statement = $this->connection->prepare($sql);
+            $statement->execute([$detail->getCode(),$detail->getName(),
+            $detail->getPrice(),$detail->getQty(),$detail->getSubTotal()]);
         }
     }
