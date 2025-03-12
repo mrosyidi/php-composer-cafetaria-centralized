@@ -20,4 +20,16 @@
         $detailView->showDetail();
     }
 
-    testViewShowDetail();
+    function testViewFilterDetail(): void 
+    {
+        $connection = Database::getConnection();
+        $paymentRepository = new PaymentRepositoryImpl($connection);
+        $paymentService = new PaymentServiceImpl($paymentRepository);
+        $detailReposiory = new DetailRepositoryImpl($connection);
+        $detailService = new DetailServiceImpl($detailReposiory);
+        $detailView = new DetailView($detailService, $paymentService);
+        $paymentService->showPayment();
+        $detailView->filterDetail();
+    }
+
+    testViewFilterDetail();
