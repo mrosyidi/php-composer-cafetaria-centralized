@@ -14,4 +14,14 @@
         var_dump($details);
     }
 
-    testFindAll();
+    function testSave(): void 
+    {
+        $connection = Database::getConnection();
+        $detailRepository = new DetailRepositoryImpl($connection);
+        $detail = new Detail(1,"Es Oyen",1,12000,12000);
+        $detailRepository->save($detail);
+        $details = $detailRepository->findAll();
+        var_dump($details);
+    }
+
+    testSave();
