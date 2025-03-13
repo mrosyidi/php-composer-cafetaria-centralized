@@ -43,7 +43,7 @@
 
         public function removeOrder(int $code): void
         {
-            
+            $this->orderRepository->remove($code);
         }
 
         public function getOrder(): array
