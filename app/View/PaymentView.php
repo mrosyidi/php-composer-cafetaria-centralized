@@ -77,8 +77,9 @@
                     }else
                     {
                         $change = $money-$pay;
-                        $this->paymentService->addPayment($code, $pay, $money);
                         $elements = DuplicateHelper::duplicate($orders, $code);
+                        $this->paymentService->addPayment($code, $pay, $money);
+                        $this->orderService->removeOrder($code);
 
                         echo "Kembalian : Rp." . $change . PHP_EOL;
                     }
