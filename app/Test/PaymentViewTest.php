@@ -29,11 +29,13 @@
         $connection = Database::getConnection();
         $orderRepository = new OrderRepositoryImpl($connection);
         $paymentRepository = new PaymentRepositoryImpl($connection);
+        $detailRepository = new DetailRepositoryImpl($connection);
         $orderService = new OrderServiceImpl($orderRepository);
         $paymentService = new PaymentServiceImpl($paymentRepository);
-        $paymentView = new PaymentView($orderService, $paymentService);
+        $detailService = new DetailServiceImpl($detailRepository);
+        $paymentView = new PaymentView($orderService, $paymentService, $detailService);
         $orderService->showOrder();
         $paymentView->addPayment();
     }
 
-    testViewShowPayment();
+    testViewAddPayment();
