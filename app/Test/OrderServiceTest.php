@@ -34,4 +34,14 @@
         var_dump($orders);
     }
 
-    testGetOrder();
+    function testRemoveOrder(): void 
+    {
+        $connection = Database::getConnection();
+        $orderRepository = new OrderRepositoryImpl($connection);
+        $orderService = new OrderServiceImpl($orderRepository);
+        $orderService->showOrder();
+        $orderService->removeOrder(2);
+        $orderService->showOrder();
+    }
+
+    testRemoveOrder();
