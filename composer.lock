@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99f548feb2199a73a520cd93f12c9866",
+    "content-hash": "b3d1a43b9ca23404a7f77c07a0b63a24",
     "packages": [
         {
             "name": "cafetariahelper/php-composer-cafetaria-helper",
-            "version": "1.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mrosyidi/php-composer-cafetaria-helper.git",
-                "reference": "aff96738a546ad7a5d57bcf5182b083e4c91bebd"
+                "reference": "6d885cb96d70256164fefd45a5235cfaf0e84a44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mrosyidi/php-composer-cafetaria-helper/zipball/aff96738a546ad7a5d57bcf5182b083e4c91bebd",
-                "reference": "aff96738a546ad7a5d57bcf5182b083e4c91bebd",
+                "url": "https://api.github.com/repos/mrosyidi/php-composer-cafetaria-helper/zipball/6d885cb96d70256164fefd45a5235cfaf0e84a44",
+                "reference": "6d885cb96d70256164fefd45a5235cfaf0e84a44",
                 "shasum": ""
             },
             "type": "library",
@@ -34,10 +34,10 @@
             ],
             "description": "Library Cafetaria Apps",
             "support": {
-                "source": "https://github.com/mrosyidi/php-composer-cafetaria-helper/tree/1.0.0",
+                "source": "https://github.com/mrosyidi/php-composer-cafetaria-helper/tree/2.0.0",
                 "issues": "https://github.com/mrosyidi/php-composer-cafetaria-helper/issues"
             },
-            "time": "2025-02-18T14:46:54+00:00"
+            "time": "2025-03-13T15:32:04+00:00"
         }
     ],
     "packages-dev": [],

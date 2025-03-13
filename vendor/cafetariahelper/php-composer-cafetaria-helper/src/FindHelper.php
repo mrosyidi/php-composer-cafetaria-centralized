@@ -7,9 +7,9 @@
             public static function find(array $items, int $code): bool
             {
                 $found = false;
-                $index = 1;
+                $index = 0;
 
-                while($index <= count($items) && !$found)
+                while($index < count($items) && !$found)
                 {
                     if($items[$index]->getCode() == $code)
                     {

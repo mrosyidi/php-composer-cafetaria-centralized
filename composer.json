@@ -20,6 +20,6 @@
         }
     ],
     "require": {
-        "cafetariahelper/php-composer-cafetaria-helper": "1.0.0"
+        "cafetariahelper/php-composer-cafetaria-helper": "2.0.0"
     }
 }
